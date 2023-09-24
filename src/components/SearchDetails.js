@@ -30,17 +30,17 @@ const SearchDetails = (props) => {
     const [orignalArray, setOriginalArray] = useState(placeDetailsArray);
 
 
-    const reviewesArr = ["Light cosy room in a modern home. Cosy clean light room with single bed and Wi-Fi, Furniture in this room will be update to higher standards by the time of your stay.",
-        "Bright airy Studio apartment located on the Ground floor, a beautiful self-contained garden studio, located in the heart of historic Highgate Village.",
-        "The apartment is equipped with a double bed and a double sofa bed and can comfortably accommodate 2 adults."
-        , "The room has been newly decorated, Plenty of space for luggage, desk space for work. moreover the staff was very coopervative and helped us throughout the stay",
-        "Light cosy room in a modern home. Cosy clean light room with single bed and Wi-Fi, Furniture in this room will be update to higher standards by the time of your stay.",
-        "Bright airy Studio apartment located on the Ground floor, a beautiful self-contained garden studio, located in the heart of historic Highgate Village.",
-        "The apartment is equipped with a double bed and a double sofa bed and can comfortably accommodate 2 adults."
-        , "The room has been newly decorated, Plenty of space for luggage, desk space for work. moreover the staff was very coopervative and helped us throughout the stay",
-        "Bright airy Studio apartment located on the Ground floor, a beautiful self-contained garden studio, located in the heart of historic Highgate Village.",
-        "Bright airy Studio apartment located on the Ground floor, a beautiful self-contained garden studio, located in the heart of historic Highgate Village.",
-
+    const reviewesArr = [
+        "Warm and welcoming environment",
+        "Nurturing and collaborative environment",
+        "Focused on early childhood development and socialization",
+        "Great place for children to learn and grow",
+        "Safe and inclusive environment",
+        "Knowledgeable and skilled staff",
+        "Friendly and nurturing environment",
+        "Unique environment for children to explore interests ",
+        "Knowledgeable and experienced staff",
+        "Safe and inclusive environment with friendly staff"
     ]
 
     const openFilterHandler = () => {  // toggling the filter dropdown
@@ -119,22 +119,13 @@ const SearchDetails = (props) => {
  
 
     return (
-        <div className='searchDeatilsMainParent'>
-            {!coupleToggle && !openPets && <p className='text-2xl flex relative uppercase fof left-24 top-36'>Toatl {placeDetailsArray.length}  Stays in {loc}  </p>}
+        <div className='searchDetailsMainParent'>
+            {!coupleToggle && !openPets && <p className='text-2xl flex relative uppercase fof left-24 top-36'>Total {placeDetailsArray.length}  Childcare Coop's in {loc}  </p>}
 
             <div className='functionalityButtonsHold cursor-pointer flex gap-4'>
                 <img src={filterbtn} className="w-36 zoom" onClick={openFilterHandler} />
 
-                <div className='flex coupleHold mt-3 zoom' onClick={openCoupleHandler}>
-                    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/couple-3431093-2863604.png" className='w-12 pt-1 h-10 pl-2 inline-block' />
-                    <p className=' inline-block pl-5'> Couple Friendly </p>
-                </div>
 
-                <div className='petHold mt-3 zoom' onClick={openPetsHandler}>
-                    <MdOutlinePets className=' inline-block text-2xl pr-2' />
-                    <p className=' inline-block'> Pet Friendly </p>
-
-                </div>
             </div>
 
             {openFilter && <div className='dropdownFilter rounded-2xl capitalize'>
@@ -175,7 +166,6 @@ const SearchDetails = (props) => {
                 {orignalArray.map((item) => {
                     return (
                         <div key={item.id}>
-                            <Link to={`/${item.id}`}>
                                 <img src={item.homeMainPic} className="object-cover relative searchDetailsImage" />
                                 <div className=' bifurcatingLine relative bg-slate-100'></div>
 
@@ -183,11 +173,8 @@ const SearchDetails = (props) => {
                                     <p className='fof text-md h-1'> {item.name} </p>
                                 </div>
 
-                                <p className=' inline-block relative text-xl mt-1 fof revSearchData'><AiFillStar className=' fill-red-400 pb-1 text-3xl inline-block' />  {item.stars} ({Math.floor(Math.random() * (999 - 100 + 1) + 100)}) </p>
-                                <p className='SDPprice'> ${item.price}/ night </p>
-                                {petReviewes && <p className=' inline-block petWlcHold'> <img src='https://static.vecteezy.com/system/resources/previews/005/484/042/original/dog-logo-illustration-free-vector.jpg' className=' w-16 h-16 inline-block' />  Pets Are welcome </p>}
-                                {co && <p className='coupleFriendlyHold relative'> <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/couple-3431093-2863604.png" className='w-12 pt-1 h-10 pl-2 inline-block' /> Couple Friendly options </p>}
-                            </Link>
+                                <p className=' inline-block relative text-xl mt-1 fof revSearchData'><AiFillStar className=' fill-red-400 pb-1 text-3xl inline-block' />  {item.stars} ({Math.floor(Math.random() * (40 - 20 + 1) + 4)}) </p>
+                                <p className='SDPprice'> . </p>
                         </div>
 
                     )

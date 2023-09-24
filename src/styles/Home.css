@@ -170,6 +170,13 @@
 
 }
 
+.bold-red {
+    color: red;
+    font-weight: bold;
+    font-family: Judson;
+    font-size:24.0pt;
+}
+
 .fss {
     font-size: 30px;
 }

@@ -16,6 +16,8 @@ import { GiBathtub } from "react-icons/gi"
 import { BsStars } from "react-icons/bs"
 import { BiBuildingHouse } from "react-icons/bi"
 import { Pagination } from "swiper";
+import { IoAccessibilityOutline } from "react-icons/io5";
+import { FaChild } from "react-icons/fa";
 
 
 //TAB 3= AMAZING POOLS
@@ -32,7 +34,6 @@ const Tab3 = () => {
                         return (
                             <div className='card boxsh' key={item.id}>
 
-                                <Link to={`/${item.id}`}>
 
                                     <Swiper
                                         spaceBetween={5}
@@ -82,8 +83,7 @@ const Tab3 = () => {
                                     <div className='flex gap-0 pl-3 pr-3 justify-between'>
 
                                         <div className='flex'>
-                                            <p className=' text-violet-600 font-semibold mr-1 text-2xl'> ${item.price.toLocaleString()}</p>
-                                            <p className='text-gray-400 text-sm pt-2'> /month </p>
+                                            <p className='text-gray-400 text-sm pt-2'> info ... </p>
                                         </div>
 
                                         <FiHeart className='text-sm heartCrad  boxsh' />
@@ -92,17 +92,16 @@ const Tab3 = () => {
 
                                     <p className='text-2xl pl-3'> {item.name} </p>
 
-                                    <p className='text-gray-400 text-sm pl-3 mb-3 mt-2'> 2699 Green Valley hughland lake ... </p>
+
+                                    <p className='text-gray-400 text-sm pl-3 mb-3 mt-2'> location ... </p>
                                     <hr className='mb-4' />
 
                                     <div className='flex justify-center pl-2 gap-4 md:gap-3'>
-                                        <span className='flex items-center'> <IoBedOutline className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'>{Math.floor(Math.random() * 5) + 2} beds </p></span>
-                                        <span className='flex items-center'> <GiBathtub className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'>{Math.floor(Math.random() * 5) + 2} bath </p> </span>
-                                        <span className='flex items-center'> <BiBuildingHouse className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'> {Math.floor(Math.random() * 2) + 2} floors </p></span>
-
+                                        <span className='flex items-center'> <IoAccessibilityOutline className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'>{Math.floor(Math.random() * 5) + 2} teachers </p></span>
+                                        <span className='flex items-center'> <FaChild className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'>{Math.floor(Math.random() * 5) + 2} kids </p> </span>
+                                        <span className='flex items-center'> <BiBuildingHouse className=' md:text-2xl text-xl mr-2' /> <p className='text-sm text-gray-400 w-16'> {Math.floor(Math.random() * 2) + 2} space </p></span>
                                     </div>
 
-                                </Link>
                             </div>
                         )
                     }

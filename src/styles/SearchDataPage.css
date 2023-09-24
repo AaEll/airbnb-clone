@@ -57,7 +57,7 @@
     width: 34rem !important;
     top: -146.4rem !important;
     left: 28rem;
-    font-size: 14px !important;
+    font-size: 23px !important;
     gap: 13.4rem !important;
 }
 
@@ -82,7 +82,7 @@
     top: 5rem;
 }
 
-.searchDeatilsMainParent {
+.searchDetailsMainParent {
     max-height: 100vh !important;
 }
 

@@ -25,10 +25,8 @@ const Checkout = (props) => {
 
       <div className='place-datails-container absolute'>
 
-        <Link to={`/${id}`}>
           <img src={homeMainPic} className="rounded-xl w-48 absolute checkout-pic" />
           <p className='checkout-name'>{name}</p>
-        </Link>
 
         <p className='checkout-stars'>{stars} (15reviews) </p>
 
